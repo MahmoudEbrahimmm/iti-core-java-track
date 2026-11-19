@@ -2,22 +2,37 @@ import java.util.Scanner;
 
 class Main{
     public static void main(String args[]){
+        //create input
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter num1: ");
-        double num1 = input.nextDouble();
+        //enter name
+        System.out.printf("Enter your name: ");
+        String name = input.nextLine();
 
-        System.out.print("Enter num2: ");
-        double num2 = input.nextDouble();
+        //enter age
+        System.out.printf("Enter your age: ");
+        int age = input.nextInt();
 
-        double sum = num1 + num2;
-        double sub = num1 - num2;
+        //enter weight
+        System.out.printf("Enter your weight (kg): ");
+        double weight = input.nextDouble();
+        
+        //Height
+        System.out.printf("Enter your Height (m): ");
+        double height = input.nextDouble();
 
-        double div = num1 / num2;
-        double mul = num1 * num2;
-        double mod= num1 % num2;
+        //BMI
+        double bmi = weight / (height * height);
 
-        System.out.println(sum + "\n" + sub + "\n" + div + "\n" + mul +"\n"+ mod);
+        //Display info of user
+        System.out.printf("%n======== Information of %s bmi ========%n",name);
+        System.out.printf("Name: %s%n", name);
+        System.out.printf("Age: %d years %n", age);
+        System.out.printf("Weight: %f kg %n", weight);
+        System.out.printf("Height: %f m %n", height);
+        System.out.printf("BMI: %.2f %n", bmi);
+        System.out.println("Goog By");
+
 
     }
 }
