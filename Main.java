@@ -1,23 +1,25 @@
 class ArrayTest{
     public static void main(String args[]){
-int twoD[][] = new int[4][5];
-        int k = 0;
+        int month = 4;
+        String season;
 
-        // 1. تعبئة المصفوفة بأرقام من 0 لـ 19
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 5; j++) {
-                twoD[i][j] = k;
-                k++;
-            }
+        if (month == 12 || month == 1 || month == 2) {
+            season = "writer";
+        }
+        else if (month == 3 || month == 4 || month == 5) {
+            season = "Spring";
+        }
+        else if (month == 6 || month == 7 || month == 8) {
+            season = "summer";
+        }
+        else if (month == 10 || month == 11 || month == 12) {
+            season = "Autumn";
+        }
+        else{
+            season = "Unknown Month";
         }
 
-        // 2. طباعة المصفوفة على شكل جدول (صفوف وأعمدة)
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 5; j++) {
-                System.out.print(twoD[i][j] + "\t");
-            }
-            System.out.println(); // سطر جديد بعد كل صف
-        }
+        System.out.println("April is in th " + season + ".");
 
     }
 }
