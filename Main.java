@@ -1,38 +1,26 @@
-import java.util.Scanner;
-
-class Main{
+class ArrayTest{
     public static void main(String args[]){
-        //create input
-        Scanner input = new Scanner(System.in);
+        int month_days[];
+        month_days = new int[12];
 
-        //enter name
-        System.out.printf("Enter your name: ");
-        String name = input.nextLine();
+        month_days[0] = 31;
+        month_days[1] = 28;
+        month_days[2] = 31;
+        month_days[3] = 30;
+        month_days[4] = 31;
+        month_days[5] = 30;
+        month_days[6] = 31;
+        month_days[7] = 31;
+        month_days[8] = 30;
+        month_days[9] = 31;
+        month_days[10] = 30;
+        month_days[11] = 31;
 
-        //enter age
-        System.out.printf("Enter your age: ");
-        int age = input.nextInt();
+        System.out.println("April has " + month_days[3] + " days.");
 
-        //enter weight
-        System.out.printf("Enter your weight (kg): ");
-        double weight = input.nextDouble();
-        
-        //Height
-        System.out.printf("Enter your Height (m): ");
-        double height = input.nextDouble();
-
-        //BMI
-        double bmi = weight / (height * height);
-
-        //Display info of user
-        System.out.printf("%n======== Information of %s bmi ========%n",name);
-        System.out.printf("Name: %s%n", name);
-        System.out.printf("Age: %d years %n", age);
-        System.out.printf("Weight: %f kg %n", weight);
-        System.out.printf("Height: %f m %n", height);
-        System.out.printf("BMI: %.2f %n", bmi);
-        System.out.println("Goog By");
-
+        for(int i = 0; i < month_days.length; i++){
+            System.out.println("month_days_count = " + month_days[i]);
+        }
 
     }
 }
