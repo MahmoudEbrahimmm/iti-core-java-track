@@ -1,25 +1,22 @@
 class ArrayTest{
     public static void main(String args[]){
-        int month_days[];
-        month_days = new int[12];
+int twoD[][] = new int[4][5];
+        int k = 0;
 
-        month_days[0] = 31;
-        month_days[1] = 28;
-        month_days[2] = 31;
-        month_days[3] = 30;
-        month_days[4] = 31;
-        month_days[5] = 30;
-        month_days[6] = 31;
-        month_days[7] = 31;
-        month_days[8] = 30;
-        month_days[9] = 31;
-        month_days[10] = 30;
-        month_days[11] = 31;
+        // 1. تعبئة المصفوفة بأرقام من 0 لـ 19
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                twoD[i][j] = k;
+                k++;
+            }
+        }
 
-        System.out.println("April has " + month_days[3] + " days.");
-
-        for(int i = 0; i < month_days.length; i++){
-            System.out.println("month_days_count = " + month_days[i]);
+        // 2. طباعة المصفوفة على شكل جدول (صفوف وأعمدة)
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(twoD[i][j] + "\t");
+            }
+            System.out.println(); // سطر جديد بعد كل صف
         }
 
     }
